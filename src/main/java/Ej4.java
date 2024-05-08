@@ -12,4 +12,5 @@ public class Ej4 {
             return num % 10 + sumOfDigits(num / 10);
         }
     }
+
 }

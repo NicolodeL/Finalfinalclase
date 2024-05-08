@@ -33,6 +33,16 @@ public class UserAccount {
     private void addFollower(UserAccount follower) {
         this.followers.add(follower);
     }
+    public void tweet(Tweet tweet) {
+        this.tweets.add(tweet);
+        for (UserAccount follower : this.followers) {
+            follower.addToTimeline(tweet);
+        }
+    }
+
+    private void addToTimeline(Tweet tweet) {
+        this.timeline.add(tweet);
+    }
 }
 
 
