@@ -28,4 +28,8 @@ El codigo no compila debido a que la función recursiva se llama a sí misma ind
 El codigo esta calculando "a" elevado a la potencia de "b".
 En cuanto a la recursividad empleada se utiliza la recursividad lineal.
 # Ej 4
-## Está dentro del codigo en un  clase llamada Ej4
+## El código está dentro del codigo en un  clase llamada Ej4
+## ¿ Qué t ipo de recursividad se está empleando? ¿ Qué comple jidad computacional tiene el algoritmo?
+Se utiliza la recursividad lineal y tiene una complejidad lineal de O(d) siendo d el numero de digitos del número
+
+
