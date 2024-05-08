@@ -27,3 +27,5 @@ El codigo no compila debido a que la función recursiva se llama a sí misma ind
 ## b)
 El codigo esta calculando "a" elevado a la potencia de "b".
 En cuanto a la recursividad empleada se utiliza la recursividad lineal.
+# Ej 4
+## Está dentro del codigo en un  clase llamada Ej4
