@@ -5,4 +5,8 @@ public class Retweet extends Tweet {
         super(message, sender);
         this.retweetedTweet = retweetedTweet;
     }
+
+    public Tweet getRetweetedTweet() {
+        return retweetedTweet;
+    }
 }
