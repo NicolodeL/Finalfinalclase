@@ -21,3 +21,9 @@ El el método de inserción funciona comparando los elementos de una lista de da
 El proceso de iteracion en 50 20 84 13 22 16 89 85 es el siguiente: primero toma el 50 como referencia y lo compara con el 20 al ser este menor los intercambia, ahora toma el 50 de referencia y lo compara cone el 84, al ser este mayor no lo cambio, sigue repitiendo este proceso hasta que la lista queda 20 50 13 22 16  84 85 89, y ahora vuelve a empezar el priceso quedando la lista al finalizar nuevamente este como 20 13 22 16 50 84 85 89, de nuevo repetiría el mismo proceso comparado los elementos e intercambiandolos hasta que la lista quedase asi: 13 16 20 22 50 84 85 89
 ## 2.5
 Para calcular esto necesitamos resolver la siguiente operación: 1024n < 16n^3, su resultado es n > 8, lo que da a enterder que para n > 8, la función A es más eficiente que la función B.
+# Ej3
+## a)
+El codigo no compila debido a que la función recursiva se llama a sí misma indefinidamente cuando b es negativo. La solucin pordría ser cambiar la linea numero 13 a else if (a == 0 || b < 0) ya que asi el codigo imprimira 0 y no tendra problemas porque b sea negativo ya que agregué una condicion para cuando lo sea.
+## b)
+El codigo esta calculando "a" elevado a la potencia de "b".
+En cuanto a la recursividad empleada se utiliza la recursividad lineal.
