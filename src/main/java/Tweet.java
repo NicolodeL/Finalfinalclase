@@ -1,17 +1,25 @@
+import java.time.LocalDate;
+
 public class Tweet {
     private String message;
-    private UserAccount author;
+    private UserAccount sender;
+    private LocalDate time;
 
-    public Tweet(String message, UserAccount author) {
+    public Tweet(String message, UserAccount sender) {
         this.message = message;
-        this.author = author;
+        this.sender = sender;
+        this.time = LocalDate.now();
     }
 
     public String getMessage() {
         return message;
     }
 
-    public UserAccount getAuthor() {
-        return author;
+    public UserAccount getSender() {
+        return sender;
+    }
+
+    public LocalDate getTime() {
+        return time;
     }
 }
