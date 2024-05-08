@@ -5,4 +5,8 @@ public class DirectMessage extends Tweet {
         super(message, sender);
         this.receiver = receiver;
     }
+
+    public UserAccount getReceiver() {
+        return receiver;
+    }
 }
