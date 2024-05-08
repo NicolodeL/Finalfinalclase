@@ -22,7 +22,19 @@ public class UserAccount {
         this.followers = new HashSet<>();
         this.following = new HashSet<>();
     }
+    public void follow(UserAccount otherUser) {
+        if (this.following.contains(otherUser)) {
+            throw new IllegalArgumentException("You are already following this user");
+        }
+        this.following.add(otherUser);
+        otherUser.addFollower(this);
+    }
+
+    private void addFollower(UserAccount follower) {
+        this.followers.add(follower);
+    }
 }
+
 
 
 
