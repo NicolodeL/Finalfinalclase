@@ -3,12 +3,12 @@ public class Email {
 
     public Email(String emailAddress) {
         if (!Utils.isValidEmail(emailAddress)) {
-            public String getEmailAddress() {
-                return emailAddress;
-                throw new IllegalArgumentException("Invalid email address");
-            }
-            this.emailAddress = emailAddress;
+            throw new IllegalArgumentException("Invalid email address");
         }
+        this.emailAddress = emailAddress;
+    }
 
+    public String getEmailAddress() {
+        return emailAddress;
     }
 }
