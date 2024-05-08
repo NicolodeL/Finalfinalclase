@@ -43,6 +43,13 @@ public class UserAccount {
     private void addToTimeline(Tweet tweet) {
         this.timeline.add(tweet);
     }
+    @Override
+    public String toString() {
+        return "UserAccount{" +
+                "alias='" + alias + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
 
 
