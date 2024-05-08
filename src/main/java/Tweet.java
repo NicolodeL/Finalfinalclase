@@ -25,4 +25,12 @@ public class Tweet {
     public LocalDate getTime() {
         return time;
     }
+    @Override
+    public String toString() {
+        return "Tweet{" +
+                "message='" + message + '\'' +
+                ", sender=" + sender +
+                ", time=" + time +
+                '}';
+    }
 }

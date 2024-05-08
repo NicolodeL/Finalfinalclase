@@ -9,4 +9,11 @@ public class Retweet extends Tweet {
     public Tweet getRetweetedTweet() {
         return retweetedTweet;
     }
+    @Override
+    public String toString() {
+        return "Retweet{" +
+                "retweetedTweet=" + retweetedTweet +
+                ", " + super.toString() +
+                '}';
+    }
 }
