@@ -29,7 +29,11 @@ El codigo esta calculando "a" elevado a la potencia de "b".
 En cuanto a la recursividad empleada se utiliza la recursividad lineal.
 # Ej 4
 ## El código está dentro del codigo en un  clase llamada Ej4
-## ¿ Qué t ipo de recursividad se está empleando? ¿ Qué comple jidad computacional tiene el algoritmo?
+## ¿ Qué tipo de recursividad se está empleando? ¿ Qué comple jidad computacional tiene el algoritmo?
 Se utiliza la recursividad lineal y tiene una complejidad lineal de O(d) siendo d el numero de digitos del número
+# Ej5
+## 2 d) 
+No creo que haya que modificar loss atributos timeline y tweets de la clase UserAccount para que contengan elementos de la clase hija Retweet, ya que al ser una subclase de tweet es como si fuese un tweet.
+No tendría que modificarlo por la misma razón que en el anterior apartado al ser retweet subclase de tweet no es necesario modificarlo porque en si cuenta como un tweet.
 
 
