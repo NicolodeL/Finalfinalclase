@@ -1,3 +1,7 @@
+package Interacciones;
+
+import Usuario.UserAccount;
+
 public class DirectMessage extends Tweet {
     private UserAccount receiver;
 
@@ -11,7 +15,7 @@ public class DirectMessage extends Tweet {
     }
     @Override
     public String toString() {
-        return "DirectMessage{" +
+        return "Interacciones.DirectMessage{" +
                 "receiver=" + receiver +
                 ", " + super.toString() +
                 '}';

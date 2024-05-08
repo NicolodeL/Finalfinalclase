@@ -1,3 +1,7 @@
+package Interacciones;
+
+import Usuario.Utils;
+
 public class Email {
     private String emailAddress;
 

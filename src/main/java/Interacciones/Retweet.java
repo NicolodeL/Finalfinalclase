@@ -1,3 +1,7 @@
+package Interacciones;
+
+import Usuario.UserAccount;
+
 public class Retweet extends Tweet {
     private Tweet retweetedTweet;
 
@@ -11,7 +15,7 @@ public class Retweet extends Tweet {
     }
     @Override
     public String toString() {
-        return "Retweet{" +
+        return "Interacciones.Retweet{" +
                 "retweetedTweet=" + retweetedTweet +
                 ", " + super.toString() +
                 '}';

@@ -1,3 +1,7 @@
+package Interacciones;
+
+import Usuario.UserAccount;
+
 import java.time.LocalDate;
 
 public class Tweet {
@@ -27,7 +31,7 @@ public class Tweet {
     }
     @Override
     public String toString() {
-        return "Tweet{" +
+        return "Interacciones.Tweet{" +
                 "message='" + message + '\'' +
                 ", sender=" + sender +
                 ", time=" + time +

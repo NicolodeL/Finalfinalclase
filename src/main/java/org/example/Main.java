@@ -1,3 +1,7 @@
+package org.example;
+
+import Interacciones.Tweet;
+import Usuario.UserAccount;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

@@ -1,3 +1,6 @@
+package Usuario;
+
+import Interacciones.Tweet;
 import java.util.*;
 
 public class UserAccount {
@@ -46,7 +49,7 @@ public class UserAccount {
     }
     @Override
     public String toString() {
-        return "UserAccount{" +
+        return "Usuario.UserAccount{" +
                 "alias='" + alias + '\'' +
                 ", email='" + email + '\'' +
                 '}';
