@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
     private UserAccount currentUser;
+    private JComboBox<UserAccount> userComboBox;
 
     public MainFrame() {
         // Configurar el JFrame
@@ -20,11 +21,13 @@ public class MainFrame extends JFrame {
         JMenuBar menuBar = new JMenuBar();
 
         // Crear los elementos del menú
+        JMenuItem loadUsersItem = new JMenuItem("Load Users");
         JMenuItem loadUserItem = new JMenuItem("Load User");
         JMenuItem publishTweetItem = new JMenuItem("Publish Tweet");
         JMenuItem sortUsersItem = new JMenuItem("Sort Users");
 
         // Añadir los elementos al menú
+        menuBar.add(loadUsersItem);
         menuBar.add(loadUserItem);
         menuBar.add(publishTweetItem);
         menuBar.add(sortUsersItem);
@@ -32,19 +35,29 @@ public class MainFrame extends JFrame {
         // Añadir la barra de menú al JFrame
         setJMenuBar(menuBar);
 
+        // Crear el JComboBox para los usuarios
+        userComboBox = new JComboBox<>();
+        userComboBox.setBounds(50, 50, 150, 20);
+        add(userComboBox);
+
         // Añadir los ActionListener a los elementos del menú
+        loadUsersItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main.loadUsersFromFile();
+                for (UserAccount user : Main.getUsers()) {
+                    userComboBox.addItem(user);
+                }
+                JOptionPane.showMessageDialog(null, "Users loaded");
+            }
+        });
+
         loadUserItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String alias = JOptionPane.showInputDialog("Enter user alias:");
-                if (alias != null && !alias.isEmpty()) {
-                    try {
-                        Main.loadUser(alias);
-                        currentUser = Main.getCurrentUser();
-                        JOptionPane.showMessageDialog(null, "User loaded: " + currentUser);
-                    } catch (IllegalArgumentException ex) {
-                        JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
-                    }
+                currentUser = (UserAccount) userComboBox.getSelectedItem();
+                if (currentUser != null) {
+                    JOptionPane.showMessageDialog(null, "User loaded: " + currentUser);
                 }
             }
         });

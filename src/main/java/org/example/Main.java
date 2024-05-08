@@ -18,7 +18,7 @@ public class Main {
         // Implementar el menú aquí
     }
 
-    private static void loadUsersFromFile() {
+    public static void loadUsersFromFile() {
         try (BufferedReader reader = new BufferedReader(new FileReader("users.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -68,5 +68,13 @@ public class Main {
 
     public static UserAccount getCurrentUser() {
         return currentUser;
+    }
+
+    public static UserAccount createUser(String alias, String email) {
+        return null;
+    }
+
+    public static UserAccount[] getUsers() {
+        return users.toArray(new UserAccount[0]);
     }
 }
