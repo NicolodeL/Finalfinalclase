@@ -9,6 +9,7 @@ public class UserAccount {
     private Set<UserAccount> following;
 
     public UserAccount(String alias, String email) {
+
         if (!Utils.isValidEmail(email)) {
             throw new IllegalArgumentException("Invalid email");
         }
@@ -49,6 +50,18 @@ public class UserAccount {
                 "alias='" + alias + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+    public static UserAccount fromString(String userString) {
+        String[] parts = userString.split(",");
+        return new UserAccount(parts[0], parts[1]);
+    }
+
+    public Object getAlias() {
+        return alias;
+    }
+
+    public <U> U getEmail() {
+        return (U) email;
     }
 }
 
